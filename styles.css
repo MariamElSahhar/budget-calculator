@@ -1,7 +1,6 @@
 #budget-calculator {
   margin: 20px;
   padding: 20px;
-  border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
 
@@ -24,20 +23,35 @@
 #budget-calculator input[type="button"],
 #budget-calculator input[type="text"] {
   margin-bottom: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #eee;
+  font-size: 18px;
+  width: 100px;
+  text-align: center;
 }
   
+/* "CALCULATE" BUTTON */
 #budget-calculator input[type="button"] {
-  background-color: #313c51;
+  background-color: #498DFC;
   color: white;
   border: none;
   border-radius: 5px;
-  padding: 10px 20px;
+  padding: 10px;
   cursor: pointer;
   font-size: 18px;
 }
 
+/* "CALCULATE" BUTTON HOVER */
 #budget-calculator input[type="button"]:hover {
   background-color: #498DFC;
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+button {
+  transform: scale(1.0);
+  transition: transform 0.2s ease-in-out;
 }
 
 #budget-calculator input[type="text"] {
@@ -66,7 +80,7 @@
 }
 
 /* EXTRA INFO ON HOVER */
-label:hover:after {
+label:hover:after:not([data-info=""]) {
   content: attr(data-info);
   background-color: #333;
   color: #fff;
@@ -76,8 +90,6 @@ label:hover:after {
   top: 25px;
   left: 0;
   z-index: 1;
-}
-label:hover:after:not([data-info=""]) {
   content: attr(data-info);
 }
 
@@ -85,4 +97,22 @@ label:hover:after:not([data-info=""]) {
 .top-label {
   margin-right: 20px;
   margin-left: 0;
+}
+
+/* BIG GROUP */
+.big-group {
+  border-radius: 10px;
+  background-color: #eee;
+  font-size: medium;
+  padding-top: 5px;
+  padding-left: 5px;
+  width: 400px;
+}
+
+.big-group .in-line-container {
+  margin-top: 5px;
+}
+
+.big-group input {
+  background-color: white;
 }
