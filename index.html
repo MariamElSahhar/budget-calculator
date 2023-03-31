@@ -11,16 +11,26 @@
         <div id="budget-calculator">
             <h2>Budget Calculator</h2>
             <form>
+            <!-- NUMBER OF DAYS -->
             <label for="days">Number of days:</label>
             <input type="number" id="days" name="days" min="1" required><br><br>
         
-            <label for="people">Number of people:</label>
+            <!-- NUMBER OF ATTENDEES -->
+            <label for="people">Number of attendees:</label>
             <input type="number" id="people" name="people" min="1" required><br><br>
+                
+            <!-- CATTERING OPTIONS -->
+            <label for="catering">Catering:</label>
+            <div class="checkbox-container">
+                <input type="checkbox" id="full-day-catering" name="catering" value="265">
+                <label for="food" class="checkbox-label">Food</label>
+              </div><br>
+            <div class="checkbox-container">
+                <input type="checkbox" id="half-day-catering" name="catering" value="200">
+                <label for="food" class="checkbox-label">Food</label>
+              </div><br>
         
-            <label for="food">Food:</label>
-            <input type="checkbox" id="food" name="food" value="50"><br>
-        
-            <label for="transport">Transport:</label>
+            <label for="photgraphy">Transport:</label>
             <input type="checkbox" id="transport" name="transport" value="25"><br>
         
             <label for="lodging">Lodging:</label>

@@ -3,7 +3,7 @@
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
 
   font: Arial, sans-serif;
   color: #313c51;
@@ -27,7 +27,7 @@
 }
   
 #budget-calculator input[type="button"] {
-  background-color: #4CAF50;
+  background-color: #498DFC;
   color: white;
   border: none;
   border-radius: 5px;
@@ -45,4 +45,16 @@
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.checkbox-label {
+  display: inline-block;
+  margin-left: 10px;
+  padding-left: 5px;
 }
