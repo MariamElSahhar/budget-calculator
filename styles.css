@@ -1,47 +1,48 @@
 #budget-calculator {
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 
-    font: Arial, sans-serif;
-    color: #313c51;
-    font-size: 12px;
-  }
+  font: Arial, sans-serif;
+  color: #313c51;
+  font-size: 12px;
+}
   
 #budget-calculator h2 {
-margin-top: 0;
+  margin-top: 0;
 }
   
 #budget-calculator label {
-display: block;
-margin-bottom: 10px;
+  display: block;
+  margin-bottom: 10px;
 }
   
 #budget-calculator input[type="number"],
 #budget-calculator input[type="checkbox"],
 #budget-calculator input[type="button"],
 #budget-calculator input[type="text"] {
-margin-bottom: 10px;
+  margin-bottom: 10px;
 }
   
 #budget-calculator input[type="button"] {
-background-color: #4CAF50;
-color: white;
-border: none;
-border-radius: 5px;
-padding: 10px 20px;
-cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
 }
 
 #budget-calculator input[type="button"]:hover {
-background-color: #3e8e41;
+  background-color: #3e8e41;
 }
 
 #budget-calculator input[type="text"] {
-font-weight: bold;
-font-size: 18px;
-padding: 10px;
-border: 1px solid #ddd;
-border-radius: 5px;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
