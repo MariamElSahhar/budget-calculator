@@ -21,14 +21,16 @@
                 
             <!-- CATTERING OPTIONS -->
             <label for="catering">Catering:</label>
+            <!-- FULL DAY -->
             <div class="checkbox-container">
-                <input type="checkbox" id="full-day-catering" name="catering" value="265">
-                <label for="food" class="checkbox-label">Food</label>
-              </div><br>
+                <input type="number" id="full-day-catering" name="catering" min="0">
+                <label for="food" class="checkbox-label">Full Day Catering</label>
+            </div>
+            <!-- HALF DAY -->
             <div class="checkbox-container">
-                <input type="checkbox" id="half-day-catering" name="catering" value="200">
-                <label for="food" class="checkbox-label">Food</label>
-              </div><br>
+                <input type="number" id="half-day-catering" name="catering" min="0">
+                <label for="food" class="checkbox-label">Half-Day Catering</label>
+            </div><br>
         
             <label for="photgraphy">Transport:</label>
             <input type="checkbox" id="transport" name="transport" value="25"><br>
