@@ -10,6 +10,7 @@ function calculateBudget() {
     if (transport) budget += 25 * days * people;
     if (lodging) budget += 100 * days * people;
   
-    document.getElementById("result").value = "$" + budget;
+    document.getElementById("result").value = 90;
   }
   
+  window.addEventListener('load', calculateBudget);
