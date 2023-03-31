@@ -2,10 +2,10 @@
   margin: 20px;
   padding: 20px;
   border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
 
-  font: Arial, sans-serif;
+  font-family: Arial, sans-serif;
   color: #313c51;
   font-size: 20px;
 }
@@ -27,16 +27,17 @@
 }
   
 #budget-calculator input[type="button"] {
-  background-color: #498DFC;
+  background-color: #313c51;
   color: white;
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
+  font-size: 18px;
 }
 
 #budget-calculator input[type="button"]:hover {
-  background-color: #3e8e41;
+  background-color: #498DFC;
 }
 
 #budget-calculator input[type="text"] {
@@ -47,14 +48,41 @@
   border-radius: 5px;
 }
 
-.checkbox-container {
-  display: flex;
-  align-items: center;
+/* SAME-LINE LABEL AND INPUT */
+.label-group {
   margin-bottom: 10px;
 }
 
-.checkbox-label {
+.in-line-container {
+  display: flex;
+  align-items: center;
+  /* margin-bottom: 10px; */
+}
+
+.in-line-label {
   /* display: inline-block; */
   margin-left: 10px;
   margin-right: 20px;
+}
+
+/* EXTRA INFO ON HOVER */
+label:hover:after {
+  content: attr(data-info);
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  z-index: 1;
+}
+label:hover:after:not([data-info=""]) {
+  content: attr(data-info);
+}
+
+/* TOP QUESTIONS */
+.top-label {
+  margin-right: 20px;
+  margin-left: 0;
 }
