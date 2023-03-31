@@ -7,6 +7,11 @@
   font-family: Arial, sans-serif;
   color: #313c51;
   font-size: 20px;
+
+  background-image: url('banner.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
   
 #budget-calculator h2 {
@@ -40,6 +45,7 @@
   padding: 10px;
   cursor: pointer;
   font-size: 18px;
+  transition: transform 0.2s ease-in-out;
 }
 
 /* "CALCULATE" BUTTON HOVER */
@@ -49,22 +55,19 @@
   transition: transform 0.2s ease-in-out;
 }
 
-button {
-  transform: scale(1.0);
-  transition: transform 0.2s ease-in-out;
-}
-
+/* RESULT */
 #budget-calculator input[type="text"] {
   font-weight: bold;
   font-size: 18px;
   padding: 10px;
-  border: 1px solid #ddd;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
+  background-color: #fff;
 }
 
 /* SAME-LINE LABEL AND INPUT */
 .label-group {
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 .in-line-container {
@@ -77,6 +80,7 @@ button {
   /* display: inline-block; */
   margin-left: 10px;
   margin-right: 20px;
+  font-size: 16px;
 }
 
 /* EXTRA INFO ON HOVER */
@@ -102,17 +106,51 @@ label:hover:after:not([data-info=""]) {
 /* BIG GROUP */
 .big-group {
   border-radius: 10px;
-  background-color: #eee;
+  /* background-color: #fff; */
   font-size: medium;
-  padding-top: 5px;
-  padding-left: 5px;
-  width: 400px;
-}
-
-.big-group .in-line-container {
-  margin-top: 5px;
+  /* padding: 10px; */
+  display: inline-block;
+  padding: 5px;
+  width: 100%;
+  height: 100%;
 }
 
 .big-group input {
   background-color: white;
+}
+
+/* COLUMN VIEW */
+.meta-container {
+  display: grid;
+  grid-template-columns: 5% auto auto;
+  grid-gap: 20px;
+  padding-left: 0%;
+  padding-right: 3%;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  /* background-color: #313c51; */
+
+}
+
+.meta-column {
+  /* Add styling for columns */
+  background-color: #fff;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.estimated-label {
+  font-size: 18px;
+}
+
+/* LINE */
+.decorative-line {
+  height: 10px;
+  width: 150px;
+  margin: 20px;
+  background-color: #498DFC;
+  border-radius: 10px;
 }
