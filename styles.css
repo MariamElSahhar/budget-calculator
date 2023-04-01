@@ -58,22 +58,25 @@
 /* RESULT */
 #budget-calculator input[type="text"] {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
   padding: 10px;
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   background-color: #fff;
+  width: 150px;
+  height: 40px;
 }
 
 /* SAME-LINE LABEL AND INPUT */
 .label-group {
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 }
 
 .in-line-container {
   display: flex;
   align-items: center;
-  /* margin-bottom: 10px; */
+  /* background-color: red; */
+  /* margin-bottom: 1px; */
 }
 
 .in-line-label {
@@ -140,14 +143,16 @@ label:hover:after:not([data-info=""]) {
   padding-top: 20px;
 }
 
+/* ESTIMATE BOX */
 .estimated-label {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
 }
 
 .result-container {
   /* background-color: red; */
   justify-content: center;
+  width: 92%;
 }
 
 /* LINE */
