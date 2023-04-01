@@ -24,7 +24,6 @@
 }
   
 #budget-calculator input[type="number"],
-#budget-calculator input[type="checkbox"],
 #budget-calculator input[type="button"],
 #budget-calculator input[type="text"] {
   margin-bottom: 10px;
@@ -35,8 +34,8 @@
   width: 100px;
   text-align: center;
 }
-  
-/* "CALCULATE" BUTTON */
+
+/* "CALCULATE" BUTTON
 #budget-calculator input[type="button"] {
   background-color: #498DFC;
   color: white;
@@ -48,12 +47,12 @@
   transition: transform 0.2s ease-in-out;
 }
 
-/* "CALCULATE" BUTTON HOVER */
+"CALCULATE" BUTTON HOVER
 #budget-calculator input[type="button"]:hover {
   background-color: #498DFC;
   transform: scale(1.1);
   transition: transform 0.2s ease-in-out;
-}
+} */
 
 /* RESULT */
 #budget-calculator input[type="text"] {
@@ -64,7 +63,7 @@
   border-radius: 5px;
   background-color: #fff;
   width: 150px;
-  height: 40px;
+  height: 30px;
 }
 
 /* SAME-LINE LABEL AND INPUT */
@@ -75,12 +74,9 @@
 .in-line-container {
   display: flex;
   align-items: center;
-  /* background-color: red; */
-  /* margin-bottom: 1px; */
 }
 
 .in-line-label {
-  /* display: inline-block; */
   margin-left: 10px;
   margin-right: 20px;
   font-size: 16px;
@@ -100,26 +96,14 @@ label:hover:after:not([data-info=""]) {
   content: attr(data-info);
 }
 
-/* TOP QUESTIONS */
-.top-label {
-  margin-right: 20px;
-  margin-left: 0;
-}
-
 /* BIG GROUP */
 .big-group {
   border-radius: 10px;
-  /* background-color: #fff; */
   font-size: medium;
-  /* padding: 10px; */
   display: inline-block;
   padding: 5px;
   width: 100%;
   height: 100%;
-}
-
-.big-group input {
-  background-color: white;
 }
 
 /* COLUMN VIEW */
@@ -131,11 +115,9 @@ label:hover:after:not([data-info=""]) {
   padding-right: 3%;
   justify-content: center;
   margin-bottom: 20px;
-  /* background-color: red; */
 }
 
 .meta-column {
-  /* Add styling for columns */
   background-color: #fff;
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -145,7 +127,7 @@ label:hover:after:not([data-info=""]) {
 
 /* ESTIMATE BOX */
 .estimated-label {
-  font-size: 25px;
+  font-size: 24px;
   font-weight: bold;
 }
 
@@ -163,7 +145,18 @@ label:hover:after:not([data-info=""]) {
   background-color: #f0e545;
   border-radius: 10px;
 }
-/* form {
-  display: flex;
-  justify-content: flex-end;
-} */
+
+
+/* NUMBER INPUT BOX */
+#budget-calculator input[type="number"] {
+  color: #313c51;
+  padding: 2px;
+}
+
+#budget-calculator input[type="number"]:hover {
+  box-shadow: 0 0 0 1px #498DFC;
+}
+
+#budget-calculator input[type="number"]:focus-visible {
+  box-shadow: 0 0 0 2px #498DFC;
+}
