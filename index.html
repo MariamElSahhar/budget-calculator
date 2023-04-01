@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Page Title</title>
+        <title>Budget Calculator</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="styles.css">
@@ -28,6 +28,7 @@
                                     <div class="in-line-container">
                                         <input type="number" value="0" id="full-day-catering" name="catering" min="0">
                                         <label for="food" class="in-line-label" data-info="Breakfast, lunch, coffee, and refreshments throughout the day">Full-Day Catering</label>
+                                        <div class="speech-bubble">Extra info</div>
                                     </div>
                                     <!-- HALF DAY -->
                                     <div class="in-line-container">
@@ -39,7 +40,7 @@
                                 
                             <!-- PHOTOGRAPHY OPTIONS -->
                             <div class="label-group">
-                                <label for="photgraphy">📷 Photography & Videography:</label>
+                                <label for="photgraphy">📷 Event Media:</label>
                                 <div class="big-group">
                                     <!-- PHOTOGRAPHY ONLY -->
                                     <div class="in-line-container">
@@ -178,7 +179,7 @@
             <!--  <input type="button" value="Export" onclick="exportToCSV()"><br><br> -->
 
                 <div class="in-line-container result-container">
-                    <label for="result" class="in-line-label estimated-label">Estimated Budget:</label>
+                    <label for="result" class="in-line-label estimated-label">Total:</label>
                     <input type="text" id="result" name="result" readonly>
                 </div> 
             </form>

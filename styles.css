@@ -93,7 +93,7 @@ label:hover:after:not([data-info=""]) {
 .meta-container {
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: 25% 30% 30%;
+  grid-template-columns: 30% 30% 30%;
   padding-left: 0%;
   padding-right: 3%;
   justify-content: center;
@@ -153,3 +153,5 @@ input[type=number]::-webkit-outer-spin-button {
 #attendees {
   margin-left: 20px;
 }
+
+/* EXTRA INFO ON HOVER */
