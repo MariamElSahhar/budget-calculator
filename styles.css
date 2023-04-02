@@ -14,18 +14,18 @@
   background-repeat: no-repeat;
 }
   
-#budget-calculator h2 {
+h2 {
   margin-top: 0;
 }
   
-#budget-calculator label {
+label {
   display: block;
   margin-bottom: 10px;
 }
   
-#budget-calculator input[type="number"],
-#budget-calculator input[type="button"],
-#budget-calculator input[type="text"] {
+input[type="number"],
+input[type="button"],
+input[type="text"] {
   margin-bottom: 10px;
   border: none;
   border-radius: 10px;
@@ -36,17 +36,23 @@
 }
 
 /* RESULT */
-#budget-calculator input[type="text"] {
+input[type="text"] {
   font-weight: bold;
   font-size: 24px;
   padding: 10px;
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
   background-color: #fff;
+  transition: background-color 0.7s ease-out;
   width: 150px;
   height: 30px;
   color: #313c51;
 }
+#result.clicked {
+  background-color: #99c4ff;
+  transition: background-color 0s ease-out;
+}
+
 
 /* SAME-LINE LABEL AND INPUT */
 .label-group {
@@ -131,17 +137,22 @@ label:hover:after:not([data-info=""]) {
 
 
 /* NUMBER INPUT BOX */
-#budget-calculator input[type="number"] {
+input[type="number"] {
   color: #313c51;
   padding: 2px;
 }
 
-#budget-calculator input[type="number"]:hover {
+input[type="number"]:hover {
   box-shadow: 0 0 0 1px #498DFC;
 }
 
-#budget-calculator input[type="number"]:focus-visible {
+input[type="number"]:focus-visible {
+  outline: none;
   box-shadow: 0 0 0 2px #498DFC;
+}
+
+input[type="text"]:focus-visible {
+  outline: none;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -162,23 +173,27 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .tooltip .tooltiptext {
-  visibility: hidden;
-  /* width: 120px; */
   background-color: rgba(0, 0, 0, 0.8);
+  width: 120px;
   color: #fff;
   text-align: center;
   border-radius: 6px;
   padding: 5px;
   position: absolute;
   z-index: 1;
-  width: 120px;
   top: 50%;
   transform: translateY(calc(-50% - 5px));
-  left: 95%;
+  left: 95%;  
+  opacity: 0;
+  transition: visibility 0s, opacity 0.2s ease-in-out;
+  pointer-events: none;
 }
 
 .tooltip:hover .tooltiptext {
+  opacity: 1;
   visibility: visible;
+  transition: visibility 0s, opacity 0.2s ease-in-out;
+  pointer-events: auto;
 }
 
 
@@ -202,4 +217,8 @@ input[type=number]::-webkit-outer-spin-button {
 .description {
   color: #a0a0aa;
   font-size: 12px;
+}
+
+::selection {
+  background-color: #99c4ff;
 }
