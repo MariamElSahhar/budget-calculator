@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", function() {
   
   inputs.forEach(function(input) {
     input.addEventListener('input', function() {
-      console.log("Input detected");
+      if(input.value == '')
+        input.value = 0;
       calculateBudget();
     });
   });
@@ -40,7 +41,7 @@ function calculateBudget() {
   var budget = 0;
   budget = full_day_catering * attendees * 265 + half_day_catering * attendees * 200 + photography_only * 2700 + videography * 3225 + full_event_recording * 3000 + stage_backdrop * 9750 + backdrop_banner * 3750 + roll_up_banner * 275 + branded_cube_design_32cm * 500 + branded_cube_design_50cm * 1000 + photo_frame_prop * 350 + trophies * 225 + floor_stickers * 43 + water_bottle_tags * 8 + certificate_printing * 18 + gift_box * 400 + totebag_gift_set * 35 + power_bank * 85 + water_bottle * 40 + pens * 25 + a5_notebook * 25 + cotton_tote_bags * 15 + laptop_stickers * 15 + badges_lanyards * 15;
   
-  document.getElementById("result").value = budget + " AED";
+  document.getElementById("result").value = budget.toLocaleString() + " AED";
   console.log(budget);
 }
   
