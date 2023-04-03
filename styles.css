@@ -48,6 +48,7 @@ input[type="text"] {
   width: 150px;
   height: 30px;
   color: #313c51;
+  cursor: pointer;
 }
 #result.clicked {
   background-color: #99c4ff;
