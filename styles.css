@@ -23,6 +23,10 @@ label {
   display: block;
   margin-bottom: 10px;
 }
+
+.top-label {
+  margin: 0px;
+}
   
 input[type="number"],
 input[type="button"],
@@ -164,8 +168,9 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-#attendees {
+#attendees, #venue {
   margin-left: 20px;
+  margin-bottom: 0;
 }
 
 /* EXTRA INFO ON HOVER */

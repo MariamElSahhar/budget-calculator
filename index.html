@@ -14,6 +14,12 @@
                 <form>
                     <div class="meta-container">
                         <div class="meta-column">
+                            <!-- VENUE -->
+                            <div class="in-line-container">
+                                <label for="venue" class="top-label">🪩 Venue<span class="unit"> (AED)</span>:</label>
+                                <input type="number" value="0" id="venue" name="venue">
+                            </div>
+                            
                             <!-- NUMBER OF ATTENDEES -->
                             <div class="in-line-container">
                                 <label for="attendees" class="top-label">👥 Attendees:</label>
@@ -28,7 +34,7 @@
                                     <div class="in-line-container">
                                         <input type="number" value="0" id="full-day-catering" name="catering" min="0">
                                         <div class="tooltip">
-                                            <label for="food" class="in-line-label">Full-Day Catering<span class="description"><br>Breakfast, lunch, and light bites throughout the day</span></label>
+                                            <label for="full-day-catering" class="in-line-label">Full-Day Catering<span class="description"><br>Breakfast, lunch, and light bites throughout the day</span></label>
                                             <span class="tooltiptext">180 - 350 AED/person</span>
                                         </div>
                                     </div>
@@ -36,7 +42,7 @@
                                     <div class="in-line-container">
                                         <input type="number" value="0" id="half-day-catering" name="catering" min="0">
                                         <div class="tooltip">
-                                            <label for="food" class="in-line-label">Half-Day Catering<span class="description"><br>Coffee and light bites (2-3 hours)</span></label>
+                                            <label for="half-day-catering" class="in-line-label">Half-Day Catering<span class="description"><br>Coffee and light bites (2-3 hours)</span></label>
                                             <span class="tooltiptext">150 - 250 AED/person</span>
                                         </div>
                                     </div><br>
@@ -51,7 +57,7 @@
                                     <div class="in-line-container">
                                         <input type="number" value="0" id="photography-only" name="catering" min="0">
                                         <div class="tooltip">
-                                            <label for="food" class="in-line-label">Photography Only</label>
+                                            <label for="photography-only" class="in-line-label">Photography Only</label>
                                             <span class="tooltiptext">1,900 - 3,500 AED/day</span>
                                         </div>
                                     </div>
@@ -59,7 +65,7 @@
                                     <div class="in-line-container">
                                         <input type="number" value="0" id="videography" name="catering" min="0">
                                         <div class="tooltip">
-                                            <label for="food" class="in-line-label">Videography<span class="description"><br>Interviews and B-rolls</span></label>
+                                            <label for="videography" class="in-line-label">Videography<span class="description"><br>Interviews and B-rolls</span></label>
                                             <span class="tooltiptext">2,450 - 4,000 AED/day</span>
                                         </div>
                                     </div>
@@ -67,7 +73,7 @@
                                     <div class="in-line-container">
                                         <input type="number" value="0" id="full-event-recording" name="catering" min="0">
                                         <div class="tooltip">
-                                            <label for="food" class="in-line-label">Full Event Recording</label>
+                                            <label for="full-event-recording" class="in-line-label">Full Event Recording</label>
                                             <span class="tooltiptext">2,500 -  3,500 AED/day</span>
                                         </div>
                                     </div>
@@ -84,7 +90,7 @@
                                     <div class="in-line-container">
                                         <input type="number" value="0" id="stage-backdrop" name="branded-materials" min="0">
                                         <div class="tooltip">
-                                            <label for="branded-materials" class="in-line-label">Stage Backdrop</label>
+                                            <label for="stage-backdrop" class="in-line-label">Stage Backdrop</label>
                                             <span class="tooltiptext">4,500 - 15,000 AED</span>
                                         </div>
                                     </div>
@@ -92,7 +98,7 @@
                                     <div class="in-line-container">
                                         <input type="number" value="0" id="backdrop-banner" name="branded-materials" min="0">
                                         <div class="tooltip">
-                                            <label for="branded-materials" class="in-line-label">Backdrop Banner</label>
+                                            <label for="backdrop-banner" class="in-line-label">Backdrop Banner</label>
                                             <span class="tooltiptext">3,000 - 4,500 AED</span>
                                         </div>
                                     </div>
@@ -100,7 +106,7 @@
                                     <div class="in-line-container">
                                         <input type="number" value="0" id="roll-up-banner" name="branded-materials" min="0">
                                         <div class="tooltip">
-                                            <label for="branded-materials" class="in-line-label">Roll-up Banners</label>
+                                            <label for="roll-up-banner" class="in-line-label">Roll-up Banners</label>
                                             <span class="tooltiptext">150 - 400 AED</span>
                                         </div>
                                     </div>                    
@@ -108,7 +114,7 @@
                                     <div class="in-line-container">
                                         <input type="number" value="0" id="branded-cube-design-32cm" name="branded-materials" min="0">
                                         <div class="tooltip">
-                                            <label for="branded-materials" class="in-line-label">Branded Cube<span class="description"> 32x32cm</span></label>
+                                            <label for="branded-cube-design-32cm" class="in-line-label">Branded Cube<span class="description"> 32x32cm</span></label>
                                             <span class="tooltiptext">500 - 1,000 AED</span>
                                         </div>
                                     </div>                    
@@ -116,7 +122,7 @@
                                     <div class="in-line-container">
                                         <input type="number" value="0" id="branded-cube-design-50cm" name="branded-materials" min="0">
                                         <div class="tooltip">
-                                            <label for="branded-materials" class="in-line-label">Branded Cube<span class="description"> 50x50cm</span></label>
+                                            <label for="branded-cube-design-50cm" class="in-line-label">Branded Cube<span class="description"> 50x50cm</span></label>
                                             <span class="tooltiptext">1,000 - 2,000 AED</span>
                                         </div>
                                     </div>                    
@@ -124,7 +130,7 @@
                                     <div class="in-line-container">
                                         <input type="number" value="0" id="photo-frame-prop" name="branded-materials" min="0">
                                         <div class="tooltip">
-                                            <label for="branded-materials" class="in-line-label">Photo Frame Prop</label>
+                                            <label for="photo-frame-prop" class="in-line-label">Photo Frame Prop</label>
                                             <span class="tooltiptext">200 - 500 AED</span>
                                         </div>
                                     </div>                    
@@ -132,7 +138,7 @@
                                     <div class="in-line-container">
                                         <input type="number" value="0" id="trophies" name="branded-materials" min="0">
                                         <div class="tooltip">
-                                            <label for="branded-materials" class="in-line-label">Trophies</label>
+                                            <label for="trophies" class="in-line-label">Trophies</label>
                                             <span class="tooltiptext">150 - 300 AED</span>
                                         </div>
                                     </div>
@@ -140,7 +146,7 @@
                                     <div class="in-line-container">
                                         <input type="number" value="0" id="floor-stickers" name="branded-materials" min="0">
                                         <div class="tooltip">
-                                            <label for="branded-materials" class="in-line-label">Floor Stickers</label>
+                                            <label for="floor-stickers" class="in-line-label">Floor Stickers</label>
                                             <span class="tooltiptext">35 - 50 AED</span>
                                         </div>
                                     </div>                    
@@ -148,7 +154,7 @@
                                     <div class="in-line-container">
                                         <input type="number" value="0" id="water-bottle-tags" name="branded-materials" min="0">
                                         <div class="tooltip">
-                                            <label for="branded-materials" class="in-line-label">Water Bottle Tags</label>
+                                            <label for="water-bottle-tags" class="in-line-label">Water Bottle Tags</label>
                                             <span class="tooltiptext">5 - 10 AED</span>
                                         </div>
                                     </div>
@@ -156,7 +162,7 @@
                                     <div class="in-line-container">
                                         <input type="number" value="0" id="certificate-printing" name="branded-materials" min="0">
                                         <div class="tooltip">
-                                            <label for="branded-materials" class="in-line-label">Certificate Printing</label>
+                                            <label for="certificate-printing" class="in-line-label">Certificate Printing</label>
                                             <span class="tooltiptext">15 - 20 AED</span>
                                         </div>
                                     </div>                    
@@ -174,7 +180,7 @@
                                     <div class="in-line-container">
                                         <input type="number" value="0" id="gift-box" name="swag" min="0">
                                         <div class="tooltip">
-                                            <label for="swag" class="in-line-label">Gift Box<span class="description"><br>Power bank, pen, notebook</span></label>
+                                            <label for="gift-box" class="in-line-label">Gift Box<span class="description"><br>Power bank, pen, notebook</span></label>
                                             <span class="tooltiptext">300 - 500 AED</span>
                                         </div>
                                     </div>
@@ -182,7 +188,7 @@
                                     <div class="in-line-container">
                                         <input type="number" value="0" id="totebag-gift-set" name="swag" min="0">
                                         <div class="tooltip">
-                                            <label for="swag" class="in-line-label">Tote Bag Gift Set<span class="description"><br>Tote bag, pen, notebook, card holder</span></label>
+                                            <label for="totebag-gift-set" class="in-line-label">Tote Bag Gift Set<span class="description"><br>Tote bag, pen, notebook, card holder</span></label>
                                             <span class="tooltiptext">30 - 40 AED</span>
                                         </div>
                                     </div>
@@ -190,7 +196,7 @@
                                     <div class="in-line-container">
                                         <input type="number" value="0" id="power-bank" name="swag" min="0">
                                         <div class="tooltip">
-                                            <label for="swag" class="in-line-label">Power Bank</label>
+                                            <label for="power-bank" class="in-line-label">Power Bank</label>
                                             <span class="tooltiptext">70 - 100 AED</span>
                                         </div>
                                     </div>
@@ -198,7 +204,7 @@
                                     <div class="in-line-container">
                                         <input type="number" value="0" id="water-bottle" name="swag" min="0">
                                         <div class="tooltip">
-                                            <label for="swag" class="in-line-label">Water Bottle<span class="description"> 500ml</span></label>
+                                            <label for="water-bottle" class="in-line-label">Water Bottle<span class="description"> 500ml</span></label>
                                             <span class="tooltiptext">30 - 50 AED</span>
                                         </div>
                                     </div>
@@ -206,7 +212,7 @@
                                     <div class="in-line-container">
                                         <input type="number" value="0" id="pens" name="swag" min="0">
                                         <div class="tooltip">
-                                            <label for="swag" class="in-line-label">Pens</label>
+                                            <label for="pens" class="in-line-label">Pens</label>
                                             <span class="tooltiptext">20 - 30 AED</span>
                                         </div>
                                     </div>
@@ -214,7 +220,7 @@
                                     <div class="in-line-container">
                                         <input type="number" value="0" id="a5-notebook" name="swag" min="0">
                                         <div class="tooltip">
-                                            <label for="swag" class="in-line-label">A5 Notebook</label>
+                                            <label for="a5-notebook" class="in-line-label">A5 Notebook</label>
                                             <span class="tooltiptext">20 - 30 AED</span>
                                         </div>
                                     </div>
@@ -222,7 +228,7 @@
                                     <div class="in-line-container">
                                         <input type="number" value="0" id="cotton-tote-bags" name="swag" min="0">
                                         <div class="tooltip">
-                                            <label for="swag" class="in-line-label">Cotton Tote Bag</label>
+                                            <label for="cotton-tote-bags" class="in-line-label">Cotton Tote Bag</label>
                                             <span class="tooltiptext">10 - 20 AED</span>
                                         </div>
                                     </div>
@@ -230,7 +236,7 @@
                                     <div class="in-line-container">
                                         <input type="number" value="0" id="laptop-stickers" name="swag" min="0">
                                         <div class="tooltip">
-                                            <label for="swag" class="in-line-label">Laptop Stickers</label>
+                                            <label for="laptop-stickers" class="in-line-label">Laptop Stickers</label>
                                             <span class="tooltiptext">10 - 20 AED</span>
                                         </div>
                                     </div>
@@ -238,7 +244,7 @@
                                     <div class="in-line-container">
                                         <input type="number" value="0" id="badges-lanyards" name="swag" min="0">
                                         <div class="tooltip">
-                                            <label for="swag" class="in-line-label">Badges and Lanyards</label>
+                                            <label for="badges-lanyards" class="in-line-label">Badges and Lanyards</label>
                                             <span class="tooltiptext">10 - 20 AED</span>
                                         </div>
                                     </div>
