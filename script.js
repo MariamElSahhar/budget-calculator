@@ -1,23 +1,24 @@
-// when the page is loaded
+// start when page is done loading
 document.addEventListener("DOMContentLoaded", function() {
+  // retrieve input fields
   var inputs = document.querySelectorAll('input[type="number"]');
-  
   inputs.forEach(function(input) {
     input.addEventListener('input', function() {
-      // ensure empty input fields are set to 0
+      // when empty, keep as 0
       if(input.value == '')
-        input.value = 0;
-      // remove the first 0 if a number is entered
+      input.value = 0;
+      // when number is inputed, calculate price & remove zero
       else if (input.value !== '0' && input.value.startsWith('0'))
           input.value = input.value.slice(1);
       calculateBudget();
     });
   });
-
-  // copy the value upon clicking the result button  
+  
+  // when result is clicked, copy value
   const click = document.getElementById("result");
   click.addEventListener("click", function() {
     navigator.clipboard.writeText(click.value);
+    console.log("clicked");
     click.classList.add("clicked");
     setTimeout(function() {
       click.classList.remove('clicked');
@@ -25,9 +26,9 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-// calculate the budget
+
 function calculateBudget() {
-  // set price
+  // set prices
   const full_day_catering_price = 265;
   const half_day_catering_price = 200;
   const photography_only_price = 2700;
@@ -53,7 +54,7 @@ function calculateBudget() {
   const laptop_stickers_price = 15;
   const badges_lanyards_price = 15;
 
-  // retrieve values by id from the html
+  // retrieve input value for each item
   var venue = parseInt(document.getElementById("venue").value);
   var attendees = parseInt(document.getElementById("attendees").value);
   var full_day_catering = parseInt(document.getElementById("full-day-catering").value);
@@ -81,9 +82,10 @@ function calculateBudget() {
   var laptop_stickers = parseInt(document.getElementById("laptop-stickers").value);
   var badges_lanyards = parseInt(document.getElementById("badges-lanyards").value);
   
-  // calculate total price  
+  // calculate budget
   var budget = 0;
-  const budget = venue +
+  // budget = venue + full_day_catering * attendees * 265 + half_day_catering * attendees * 200 + photography_only * 2700 + videography * 3225 + full_event_recording * 3000 + stage_backdrop * 9750 + backdrop_banner * 3750 + roll_up_banner * 275 + branded_cube_design_32cm * 500 + branded_cube_design_50cm * 1000 + photo_frame_prop * 350 + trophies * 225 + floor_stickers * 43 + water_bottle_tags * 8 + certificate_printing * 18 + gift_box * 400 + totebag_gift_set * 35 + power_bank * 85 + water_bottle * 40 + pens * 25 + a5_notebook * 25 + cotton_tote_bags * 15 + laptop_stickers * 15 + badges_lanyards * 15;
+  budget = venue +
   full_day_catering * attendees * full_day_catering_price +
   half_day_catering * attendees * half_day_catering_price +
   photography_only * photography_only_price +
@@ -109,7 +111,7 @@ function calculateBudget() {
   laptop_stickers * laptop_stickers_price +
   badges_lanyards * badges_lanyards_price;
 
-  // print price followed by "AED"
+  // display result
   document.getElementById("result").value = budget.toLocaleString() + " AED";
 }
   
