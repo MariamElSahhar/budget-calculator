@@ -1,5 +1,5 @@
 // start when page is done loading
-document.addEventListener("DOMContentLoaded", function() {
+$(document).ready(function() {
   // retrieve input fields
   var inputs = document.querySelectorAll('input[type="number"]');
   inputs.forEach(function(input) {
@@ -15,10 +15,9 @@ document.addEventListener("DOMContentLoaded", function() {
   });
   
   // when result is clicked, copy value
-  const click = document.getElementById("result");
+  const click = $("#result");
   click.addEventListener("click", function() {
     navigator.clipboard.writeText(click.value);
-    console.log("clicked");
     click.classList.add("clicked");
     setTimeout(function() {
       click.classList.remove('clicked');
@@ -26,12 +25,12 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-
+// calculates and displays budget
 function calculateBudget() {
   // set prices
   const full_day_catering_price = 265;
   const half_day_catering_price = 200;
-  const photography_only_price = 2700;
+  const photography_only_price = 2700;``
   const videography_price = 3225;
   const full_event_recording_price = 3000;
   const stage_backdrop_price = 9750;
@@ -55,36 +54,35 @@ function calculateBudget() {
   const badges_lanyards_price = 15;
 
   // retrieve input value for each item
-  var venue = parseInt(document.getElementById("venue").value);
-  var attendees = parseInt(document.getElementById("attendees").value);
-  var full_day_catering = parseInt(document.getElementById("full-day-catering").value);
-  var half_day_catering = parseInt(document.getElementById("half-day-catering").value);
-  var photography_only = parseInt(document.getElementById("photography-only").value);
-  var videography = parseInt(document.getElementById("videography").value);
-  var full_event_recording = parseInt(document.getElementById("full-event-recording").value);
-  var stage_backdrop = parseInt(document.getElementById("stage-backdrop").value);
-  var backdrop_banner = parseInt(document.getElementById("backdrop-banner").value);
-  var roll_up_banner = parseInt(document.getElementById("roll-up-banner").value);
-  var branded_cube_design_32cm = parseInt(document.getElementById("branded-cube-design-32cm").value);
-  var branded_cube_design_50cm = parseInt(document.getElementById("branded-cube-design-50cm").value);
-  var photo_frame_prop = parseInt(document.getElementById("photo-frame-prop").value);
-  var trophies = parseInt(document.getElementById("trophies").value);
-  var floor_stickers = parseInt(document.getElementById("floor-stickers").value);
-  var water_bottle_tags = parseInt(document.getElementById("water-bottle-tags").value);
-  var certificate_printing = parseInt(document.getElementById("certificate-printing").value);
-  var gift_box = parseInt(document.getElementById("gift-box").value);
-  var totebag_gift_set = parseInt(document.getElementById("totebag-gift-set").value);
-  var power_bank = parseInt(document.getElementById("power-bank").value);
-  var water_bottle = parseInt(document.getElementById("water-bottle").value);
-  var pens = parseInt(document.getElementById("pens").value);
-  var a5_notebook = parseInt(document.getElementById("a5-notebook").value);
-  var cotton_tote_bags = parseInt(document.getElementById("cotton-tote-bags").value);
-  var laptop_stickers = parseInt(document.getElementById("laptop-stickers").value);
-  var badges_lanyards = parseInt(document.getElementById("badges-lanyards").value);
+  var venue = parseInt($("#venue").val());
+  var attendees = parseInt($("#attendees").val());
+  var full_day_catering = parseInt($("#full-day-catering").val());
+  var half_day_catering = parseInt($("#half-day-catering").val());
+  var photography_only = parseInt($("#photography-only").val());
+  var videography = parseInt($("#videography").val());
+  var full_event_recording = parseInt($("#full-event-recording").val());
+  var stage_backdrop = parseInt($("#stage-backdrop").val());
+  var backdrop_banner = parseInt($("#backdrop-banner").val());
+  var roll_up_banner = parseInt($("#roll-up-banner").val());
+  var branded_cube_design_32cm = parseInt($("#branded-cube-design-32cm").val());
+  var branded_cube_design_50cm = parseInt($("#branded-cube-design-50cm").val());
+  var photo_frame_prop = parseInt($("#photo-frame-prop").val());
+  var trophies = parseInt($("#trophies").val());
+  var floor_stickers = parseInt($("#floor-stickers").val());
+  var water_bottle_tags = parseInt($("#water-bottle-tags").val());
+  var certificate_printing = parseInt($("#certificate-printing").val());
+  var gift_box = parseInt($("#gift-box").val());
+  var totebag_gift_set = parseInt($("#totebag-gift-set").val());
+  var power_bank = parseInt($("#power-bank").val());
+  var water_bottle = parseInt($("#water-bottle").val());
+  var pens = parseInt($("#pens").val());
+  var a5_notebook = parseInt($("#a5-notebook").val());
+  var cotton_tote_bags = parseInt($("#cotton-tote-bags").val());
+  var laptop_stickers = parseInt($("#laptop-stickers").val());
+  var badges_lanyards = parseInt($("#badges-lanyards").val());
   
   // calculate budget
   var budget = 0;
-  // budget = venue + full_day_catering * attendees * 265 + half_day_catering * attendees * 200 + photography_only * 2700 + videography * 3225 + full_event_recording * 3000 + stage_backdrop * 9750 + backdrop_banner * 3750 + roll_up_banner * 275 + branded_cube_design_32cm * 500 + branded_cube_design_50cm * 1000 + photo_frame_prop * 350 + trophies * 225 + floor_stickers * 43 + water_bottle_tags * 8 + certificate_printing * 18 + gift_box * 400 + totebag_gift_set * 35 + power_bank * 85 + water_bottle * 40 + pens * 25 + a5_notebook * 25 + cotton_tote_bags * 15 + laptop_stickers * 15 + badges_lanyards * 15;
   budget = venue +
   full_day_catering * attendees * full_day_catering_price +
   half_day_catering * attendees * half_day_catering_price +
@@ -111,8 +109,8 @@ function calculateBudget() {
   laptop_stickers * laptop_stickers_price +
   badges_lanyards * badges_lanyards_price;
 
-  // display result
-  document.getElementById("result").value = budget.toLocaleString() + " AED";
+  // display result in result box
+  $('#result').val(budget + ' AED');
 }
   
 
