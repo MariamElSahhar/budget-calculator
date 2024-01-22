@@ -230,3 +230,29 @@ input[type=number]::-webkit-outer-spin-button {
 ::selection {
   background-color: #99c4ff;
 }
+
+@media (max-width: 1023px) {
+  .meta-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media (max-width: 425px) {
+  .meta-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  .in-line-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .big-group >.in-line-container {
+    flex-direction: column-reverse;
+  }
+}
